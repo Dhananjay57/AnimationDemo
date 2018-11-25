@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateFormat;
@@ -25,7 +24,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -184,17 +182,17 @@ public class HomeActivity extends AppCompatActivity implements View.OnLongClickL
         });
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void circleRevelActivity() {
-        int x = layoutContent.getRight();
+        int x = layoutContent.getLeft();
         int y = layoutContent.getBottom();
+
         int startRadius = 0;
-        int endRadius = (int) Math.hypot(layoutContent.getWidth(), layoutContent.getHeight());
-        Animator anim = ViewAnimationUtils.createCircularReveal(layoutContent, x, y, startRadius, endRadius);
-        anim.setDuration(1000);
+        int endRadius = (int) Math.hypot(layoutMain.getWidth(), layoutMain.getHeight());
+
+        Animator anim = ViewAnimationUtils.createCircularReveal(iv_add_day, x, y, startRadius, endRadius);
+
+        swipe_layout_container.setVisibility(View.INVISIBLE);
         anim.start();
-        layoutContent.setVisibility(View.GONE);
-        swipe_layout_container.setVisibility(View.VISIBLE);
     }
 
     @Override
