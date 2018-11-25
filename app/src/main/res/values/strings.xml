@@ -19,4 +19,9 @@
     <string name="reflect_on_your_training_by_answering_the">Reflect on your training by answering the following questions</string>
     <string name="by_using_this_service_i_accept_athleteminder_s_term_of_service">By using this service, I accept AthleteMinder\'s &lt;u>term of service&lt;/u></string>
     <string name="go_to_my_reports">Go to My Reports</string>
+    <string name="focus">Focus</string>
+    <string name="intensity">Intensity</string>
+    <string name="eating">Eating</string>
+    <string name="sleep">Sleep</string>
+    <string name="moving_in_a_great_direction">Moving in a great direction!</string>
 </resources>
