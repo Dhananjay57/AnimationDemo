@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:id="@+id/layoutMain">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/background_color"
+            android:layout_height="56dp"
+            app:titleTextColor="@color/white_color"
+            android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/calendarView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            app:selectorColor="@color/white_color"
+            app:textColorSelected="#FFFF" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/tv_head_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/choose_your_day"
+            android:textAllCaps="true"
+            android:textColor="@color/white_color"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_sub_heading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/use_the_circle_to_drag_and_drop_the_type_of_day_you_want_to_add_to_your_calendar"
+            android:textColor="@color/white_color"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_head_text" />
+
+        <ImageView
+            android:id="@+id/iv_training"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_circle_training"
+            android:padding="20dp"
+            android:src="@drawable/ic_access_alarm_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_competition" />
+
+        <TextView
+            android:id="@+id/tv_training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/training"
+            android:textAllCaps="true"
+            android:textColor="@color/training_text_color"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/iv_training"
+            app:layout_constraintTop_toBottomOf="@+id/iv_training"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_competition"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/bg_circle_competition"
+            android:padding="20dp"
+            android:src="@drawable/ic_compare_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_heading_text"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="142dp" />
+
+        <TextView
+            android:id="@+id/tv_competition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/competition"
+            android:textAllCaps="true"
+            android:textColor="@color/competition_text_color"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/iv_competition"
+            app:layout_constraintTop_toBottomOf="@+id/iv_competition" />
+
+        <ImageView
+            android:id="@+id/iv_rest"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_circle_rest"
+            android:padding="20dp"
+            android:src="@drawable/ic_battery_charging_30_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_competition"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/rest"
+            android:textAllCaps="true"
+            android:textColor="@color/rest_text_color"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_rest"
+            app:layout_constraintTop_toBottomOf="@+id/iv_rest" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_competition"
+            app:layout_constraintVertical_bias="0.768">
+
+            <ImageView
+                android:id="@+id/iv_add_day"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle_add_btn"
+                android:padding="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_add_day_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle_add_btn"
+                android:padding="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_add_day_3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_plus"
+                android:backgroundTint="@color/white_color"
+                android:padding="20dp" />
+
+        </FrameLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/swipe_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg_color">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_training_text"
+            android:src="@drawable/ic_timer_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/tv_training_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tv_question"
+            android:gravity="center"
+            android:text="@string/training"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_margin="40dp"/>
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_color"
+            android:text="@string/reflect_on_your_training_by_answering_the"
+            app:layout_constraintBottom_toTopOf="@+id/btn_how_it_go"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"/>
+        <Button
+            android:alpha="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/how_dit_it_go"
+            android:id="@+id/btn_how_it_go"
+            app:layout_constraintBottom_toTopOf="@+id/tv_delete"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/rest_text_color"
+            android:background="@color/white_color"
+            />
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_event"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

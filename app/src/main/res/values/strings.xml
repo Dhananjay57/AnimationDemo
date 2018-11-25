@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Athlete Minder</string>
+    <string name="create_my_profile">Create my Profile</string>
+    <string name="skip">SKIP</string>
+    <string name="mind_your_sport">Mind your sport</string>
+    <string name="athlete_minder">Athlete . Minder</string>
+    <string name="choose_your_day">Choose your day</string>
+    <string name="use_the_circle_to_drag_and_drop_the_type_of_day_you_want_to_add_to_your_calendar">Use the circles to drag and drop the type of day you want to add to your calendar.</string>
+    <string name="training">Training</string>
+    <string name="competition">Competition</string>
+    <string name="rest">Rest</string>
+    <string name="exit">Exit</string>
+    <string name="plan_of_action">Plan of Action</string>
+    <string name="wining_it">Winging it</string>
+    <string name="bringing_it">Bringing it</string>
+    <string name="did_you_think_about_what_you_wanted_to_do_and_how_to_do_it">Did you think about what you wanted to do and how to do it ?</string>
+    <string name="delete_event">Delete Event</string>
+    <string name="how_dit_it_go">How Did it go ?</string>
+    <string name="reflect_on_your_training_by_answering_the">Reflect on your training by answering the following questions</string>
+    <string name="by_using_this_service_i_accept_athleteminder_s_term_of_service">By using this service, I accept AthleteMinder\'s &lt;u>term of service&lt;/u></string>
+    <string name="go_to_my_reports">Go to My Reports</string>
+</resources>
