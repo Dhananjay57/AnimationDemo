@@ -57,8 +57,6 @@ public class PlanOfActionActivity extends AppCompatActivity{
             public void run() {
                 HeightAnimation heightAnimation = new HeightAnimation(wingging_it , 450 , 750);
                 heightAnimation.setDuration(1000);
-                Animation animZoomOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_out);
-                tvSubText.startAnimation(animZoomOut);
                 wingging_it.setAlpha(.2f);
                 wingging_it.startAnimation(heightAnimation);
 
@@ -70,14 +68,12 @@ public class PlanOfActionActivity extends AppCompatActivity{
             public void run() {
                 HeightAnimation heightAnimation = new HeightAnimation(wingging_it , 750 , 450);
                 heightAnimation.setDuration(1200);
-                Animation animZoomOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_out);
-                tvBringingIt.startAnimation(animZoomOut);
                 wingging_it.setAlpha(.2f);
                 wingging_it.startAnimation(heightAnimation);
 
 
             }
-        }, 1700);
+        }, 2000);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -88,7 +84,7 @@ public class PlanOfActionActivity extends AppCompatActivity{
 
 
             }
-        }, 2000);
+        }, 2500);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -99,7 +95,7 @@ public class PlanOfActionActivity extends AppCompatActivity{
 
 
             }
-        }, 2500);
+        }, 3000);
 
 
         wingging_it.setOnClickListener(new View.OnClickListener() {

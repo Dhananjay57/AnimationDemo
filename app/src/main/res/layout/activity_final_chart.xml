@@ -66,7 +66,7 @@
             <View
                 android:id="@+id/view_one"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="0dp"
                 android:alpha=".5"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
@@ -80,15 +80,16 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <TextView
+            <com.example.drizzle.grappus_assignment.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
-                android:rotation="-180"
                 android:text="@string/focus"
                 android:textAllCaps="true"
                 android:textColor="@color/white_color"
                 android:textSize="24sp"
+                android:gravity="bottom"
+                android:layout_margin="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:textStyle="bold" />
@@ -96,7 +97,7 @@
             <View
                 android:id="@+id/view_two"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="0dp"
                 android:alpha=".5"
                 android:layout_alignParentBottom="true"
                 android:background="@color/training_text_color" />
@@ -107,11 +108,12 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <TextView
+            <com.example.drizzle.grappus_assignment.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
-                android:rotation="-180"
+                android:gravity="bottom"
+                android:layout_margin="10dp"
                 android:text="@string/intensity"
                 android:textAllCaps="true"
                 android:textColor="@color/white_color"
@@ -123,7 +125,7 @@
             <View
                 android:id="@+id/view_three"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="0dp"
                 android:alpha=".5"
                 android:layout_alignParentBottom="true"
                 android:background="@color/training_text_color" />
@@ -134,11 +136,12 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <TextView
+            <com.example.drizzle.grappus_assignment.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
-                android:rotation="-180"
+                android:gravity="bottom"
+                android:layout_margin="10dp"
                 android:text="@string/eating"
                 android:textAllCaps="true"
                 android:textColor="@color/white_color"
@@ -150,7 +153,7 @@
             <View
                 android:id="@+id/view_four"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="0dp"
                 android:alpha=".5"
                 android:layout_alignParentBottom="true"
                 android:background="@color/training_text_color" />
@@ -162,11 +165,12 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <TextView
+            <com.example.drizzle.grappus_assignment.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
-                android:gravity="center|bottom"
+                android:gravity="bottom"
+                android:layout_margin="10dp"
                 android:text="@string/sleep"
                 android:textAllCaps="true"
                 android:textColor="@color/white_color"
@@ -178,7 +182,7 @@
             <View
                 android:id="@+id/view_five"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="0dp"
                 android:alpha=".5"
                 android:layout_alignParentBottom="true"
                 android:background="@color/training_text_color" />

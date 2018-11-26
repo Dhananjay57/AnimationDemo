@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.bluehomestudio.animationplus.animation.HeightAnimation;
+
 
 public class FinalChartActivity extends AppCompatActivity {
     private View viewOne, viewTwo,viewThree, viewFour, viewFive;
@@ -22,33 +24,55 @@ public class FinalChartActivity extends AppCompatActivity {
         viewThree = findViewById(R.id.view_three);
         viewFour = findViewById(R.id.view_four);
         viewFive = findViewById(R.id.view_five);
-       viewAnimation();
+        viewAnimation();
+
 
     }
 
     private void viewAnimation() {
-        final Animation slide_up = AnimationUtils.loadAnimation(this, R.anim.slide_up_animation);
-        final Animation slide_down = AnimationUtils.loadAnimation(this,R.anim.slide_down_animation);
-        new Handler().postDelayed(new Runnable(){
+        HeightAnimation heightAnimation = new HeightAnimation(viewOne , 0 , 150);
+        heightAnimation.setDuration(1000);
+        viewOne.startAnimation(heightAnimation);
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                viewOne.startAnimation(slide_up);
-                viewTwo.startAnimation(slide_up);
-                viewThree.startAnimation(slide_up);
-                viewFour.startAnimation(slide_up);
-                viewFive.startAnimation(slide_up);
-            }
-        }, 500);
-        new Handler().postDelayed(new Runnable(){
+                HeightAnimation heightAnimation = new HeightAnimation(viewTwo , 0 , 250);
+                heightAnimation.setDuration(1000);
+                viewTwo.startAnimation(heightAnimation);
 
+
+            }
+        }, 1300);
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                viewOne.startAnimation(slide_down);
-                viewTwo.startAnimation(slide_down);
-                viewThree.startAnimation(slide_down);
-                viewFour.startAnimation(slide_down);
-                viewFive.startAnimation(slide_down);
+                HeightAnimation heightAnimation = new HeightAnimation(viewThree , 0 , 200);
+                heightAnimation.setDuration(1000);
+                viewThree.startAnimation(heightAnimation);
+
+
             }
-        }, 700);
+        }, 1000);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                HeightAnimation heightAnimation = new HeightAnimation(viewFour , 0 , 350);
+                heightAnimation.setDuration(1000);
+                viewFour.startAnimation(heightAnimation);
+
+
+            }
+        }, 1500);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                HeightAnimation heightAnimation = new HeightAnimation(viewFive , 0 , 150);
+                heightAnimation.setDuration(1000);
+                viewFive.startAnimation(heightAnimation);
+
+
+            }
+        }, 1700);
+
     }
 }
