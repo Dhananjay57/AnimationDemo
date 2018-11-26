@@ -183,15 +183,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnLongClickL
     }
 
     private void circleRevelActivity() {
-        int x = layoutContent.getLeft();
-        int y = layoutContent.getBottom();
+        int x = (layoutMain.getRight() - layoutMain.getLeft()) / 2;
+        int y = layoutMain.getBottom();
 
         int startRadius = 0;
         int endRadius = (int) Math.hypot(layoutMain.getWidth(), layoutMain.getHeight());
 
-        Animator anim = ViewAnimationUtils.createCircularReveal(iv_add_day, x, y, startRadius, endRadius);
+        Animator anim = ViewAnimationUtils.createCircularReveal(swipe_layout_container, x, y, startRadius, endRadius);
 
-        swipe_layout_container.setVisibility(View.INVISIBLE);
+        swipe_layout_container.setVisibility(View.VISIBLE);
+
         anim.start();
     }
 

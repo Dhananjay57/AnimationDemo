@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
-import android.view.ViewAnimationUtils
 import android.view.animation.AnimationUtils
 import com.facebook.rebound.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -35,18 +34,6 @@ class MainActivity : AppCompatActivity() {
         btn_skip.setOnClickListener {
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)
-        }
-
-        btn_create_profile.setOnClickListener {
-            val x = 0
-            val y = 0
-
-            val startRadius = 0
-            val endRadius = Math.hypot(layoutMain.width.toDouble(), layoutMain.height.toDouble()).toInt()
-
-            val anim = ViewAnimationUtils.createCircularReveal(layoutMain, x, y, startRadius.toFloat(), endRadius.toFloat())
-
-            anim.start()
         }
 
         Handler().postDelayed({
