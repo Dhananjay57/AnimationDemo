@@ -1,4 +1,4 @@
-package com.example.drizzle.grappus_assignment;
+package com.example.drizzle.grappus_assignment.ui;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.bluehomestudio.animationplus.animation.HeightAnimation;
+import com.example.drizzle.grappus_assignment.R;
 
 
 public class FinalChartActivity extends AppCompatActivity {

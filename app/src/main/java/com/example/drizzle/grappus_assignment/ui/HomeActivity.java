@@ -1,4 +1,4 @@
-package com.example.drizzle.grappus_assignment;
+package com.example.drizzle.grappus_assignment.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -24,6 +24,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.drizzle.grappus_assignment.R;
 
 import java.util.Calendar;
 
@@ -183,15 +185,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnLongClickL
     }
 
     private void circleRevelActivity() {
-        int x = layoutContent.getLeft();
-        int y = layoutContent.getBottom();
+        int x = (layoutMain.getRight() - layoutMain.getLeft()) / 2;
+        int y = layoutMain.getBottom();
 
         int startRadius = 0;
         int endRadius = (int) Math.hypot(layoutMain.getWidth(), layoutMain.getHeight());
 
-        Animator anim = ViewAnimationUtils.createCircularReveal(iv_add_day, x, y, startRadius, endRadius);
+        Animator anim = ViewAnimationUtils.createCircularReveal(swipe_layout_container, x, y, startRadius, endRadius);
 
-        swipe_layout_container.setVisibility(View.INVISIBLE);
+        swipe_layout_container.setVisibility(View.VISIBLE);
+
         anim.start();
     }
 

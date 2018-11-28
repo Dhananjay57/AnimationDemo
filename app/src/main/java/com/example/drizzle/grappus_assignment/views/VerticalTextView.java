@@ -1,4 +1,4 @@
-package com.example.drizzle.grappus_assignment;
+package com.example.drizzle.grappus_assignment.views;
 
 import android.content.Context;
 import android.graphics.Canvas;

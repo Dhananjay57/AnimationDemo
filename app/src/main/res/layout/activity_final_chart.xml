@@ -49,7 +49,7 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <com.example.drizzle.grappus_assignment.VerticalTextView
+            <com.example.drizzle.grappus_assignment.views.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -80,7 +80,7 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <com.example.drizzle.grappus_assignment.VerticalTextView
+            <com.example.drizzle.grappus_assignment.views.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
@@ -108,7 +108,7 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <com.example.drizzle.grappus_assignment.VerticalTextView
+            <com.example.drizzle.grappus_assignment.views.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
@@ -136,7 +136,7 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <com.example.drizzle.grappus_assignment.VerticalTextView
+            <com.example.drizzle.grappus_assignment.views.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
@@ -165,7 +165,7 @@
             android:background="#73797b"
             android:layout_margin="3dp">
 
-            <com.example.drizzle.grappus_assignment.VerticalTextView
+            <com.example.drizzle.grappus_assignment.views.VerticalTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"

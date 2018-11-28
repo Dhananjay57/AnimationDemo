@@ -1,25 +1,16 @@
-package com.example.drizzle.grappus_assignment;
+package com.example.drizzle.grappus_assignment.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bluehomestudio.animationplus.animation.HeightAnimation;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.os.Build.TIME;
+import com.example.drizzle.grappus_assignment.R;
 
 public class PlanOfActionActivity extends AppCompatActivity{
     LinearLayout wingging_it;
@@ -32,22 +23,12 @@ public class PlanOfActionActivity extends AppCompatActivity{
         wingging_it = findViewById(R.id.layout_wining);
         tvBringingIt = findViewById(R.id.tv_bringing_it);
         tvSubText = findViewById(R.id.tv_sub_text);
-//        final Animation slide_up = AnimationUtils.loadAnimation(this, R.anim.slide_up_animation);
-//        final Animation slide_down = AnimationUtils.loadAnimation(this,R.anim.slide_down_animation);
-//        new Handler().postDelayed(new Runnable(){
-//
-//            @Override
-//            public void run() {
-//                wingging_it.startAnimation(slide_up);
-//            }
-//        }, 500);
-//        new Handler().postDelayed(new Runnable(){
-//
-//            @Override
-//            public void run() {
-//                wingging_it.startAnimation(slide_down);
-//            }
-//        }, 700);
+        viewAnimation();
+
+
+    }
+
+    private void viewAnimation() {
         HeightAnimation heightAnimation = new HeightAnimation(wingging_it , 50 , 450);
         heightAnimation.setDuration(1000);
         wingging_it.setAlpha(.2f);
@@ -105,8 +86,6 @@ public class PlanOfActionActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
-
     }
 
 }
